@@ -5,7 +5,7 @@ const repository = core.getInput('repository');
 var owner = core.getInput('owner');
 var repo = core.getInput('repo');
 var excludes = core.getInput('excludes').trim().split(",");
-const token = coree.getInput('token');
+const token = core.getInput('token');
 
 const octokit = new Octokit({auth: token})
 
