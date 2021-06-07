@@ -16,6 +16,9 @@ inputs:
   excludes:
     description: 'Types of releases to exclude (e.g. pre-release)'
     required: false
+  token:
+    description: 'token'
+    required: true
 outputs:
   release:
     description: 'Latest release'
