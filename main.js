@@ -26,6 +26,7 @@ async function run() {
             releases = releases.filter(x => x.draft != true);
         }
         if (releases.length) {
+            core.info(releases[0].tag_name)
             core.setOutput('release', releases[0].tag_name)
         } else {
             core.setFailed("No valid releases");
