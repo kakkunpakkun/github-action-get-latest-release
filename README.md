@@ -14,6 +14,7 @@ Name | Description | Example
 --- | --- | ---
 owner | The Github user or organization that owns the repository |  pozetroninc
 repo | The repository name | github-action-get-latest-release
+token | The token for GitHub auth | xxx-abc1234
 
 **or**
 Name | Description | Example
@@ -57,6 +58,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+          with: ${{ secrets.GITHUB_TOKEN }}
           repository: pozetroninc/keydb-timeseries
           dockerfile: timeseries.dockerfile
           build_args: KEY_DB_VERSION=${{ steps.keydb.outputs.release }}, REDIS_TIME_SERIES_VERSION=${{ steps.timeseries.outputs.release }}
